@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int main(){
 int d=1,c=1,a=1;
 printf("\n");
