@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	int l,i=0,r,c,j=0;
+	int l,i=0,c,j=0;
 	char d=' ';
 	do{				
 		printf("Inserisci la lunghezza del quadrato compresa da 1 a 20 \n");
@@ -9,7 +9,6 @@ int main() {
 		if(l<1||l>20)  printf("Valore fuori dai limiti!");			
 	}while(l<1||l>20);
 
-	r=l;
 	c=l;
 
 	do{
