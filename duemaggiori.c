@@ -1,29 +1,40 @@
 #include <stdio.h>
-
-int main()  {
-	int max,a,i=0,max2;
-	
-	printf("Inserisi dieci numeri \t");
-	scanf("%d", &a);
-	max=a;
-	max2=a;
-	while(i<9){
-			printf("\n");
-			scanf("%d", &a);
-			if(a>=max){
-				max2=max;
-				max=a;
-			}
-			i++;
-			/*No 'else' for this 'if'*/
-				
+int main()
+{
+	int c=1,val,max1,max2;
+	printf("CALCOLO DEI DUE VALORI MAGGIORI TRA 10 VALORI INSERITI DALL'UTENTE.");
+	printf("\n\nInserire un valore:\t");
+	scanf("%d",&val);
+	max1 = val;
+	printf("\n\nInserire un valore:\t");
+	scanf("%d",&val);
+	c++;
+	if ( val > max1 )
+	{
+		max2 = max1;
+		max1 = val;
 	}
-
-	printf("Il massimo dei dieci numeri e %d", max);
-	putchar('\n');
-	
-	printf("Il secondo massimo dei dieci e %d", max2);
-	putchar('\n');
-
-	return 0;
+	else
+	{
+		max2 = val;
+	}
+	while ( c < 10 )
+	{
+		printf("\nInserire un valore:\t");
+		scanf("%d",&val);
+		if ( val > max1 )
+		{
+			max2 = max1;
+			max1 = val;
+		}
+		else if ( val > max2 )
+		{
+			max2 = val;
+		}
+		/*No 'else' for this 'if'*/
+		c++;
+	}
+	printf("\n\nValore maggiore:\t%d",max1);
+	printf("\nSecondo valore maggiore:\t%d\n",max2);
+return 0;
 }
