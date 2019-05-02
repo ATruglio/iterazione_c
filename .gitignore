@@ -1,4 +1,5 @@
 *.o
+
 countdown
 treintre
 pitagora
@@ -6,3 +7,6 @@ massimo
 duemaggiori
 quadrato
 quadrato_vuoto
+cerchio
+cifra
+palindromi
