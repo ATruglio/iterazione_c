@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 int main(){
-	int c=1,a=1;
+	int riga=1,colonna=1;
 	printf("\n");
-	while(c<=10){
+	while(riga<=10){
 		while(a<=10){
-			printf("%d\t",a*c);
-			a++;
+			printf("%d\t",a*riga);
+			colonna++;
 			
 	         }
-		c++;
-		a=1;
+		riga++;
+		colonna=1;
 		printf("\n");
 	}
 	return 0;

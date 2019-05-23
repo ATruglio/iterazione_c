@@ -3,18 +3,18 @@
 
 int main()
 {
-	int i=0,c=10,r;
+	int i=0,c=10,num;
 
 	do{
 		printf("Inserire  un valore positivo\n");
-		scanf("%d", &r);
-	}while(r<=0);
+		scanf("%d", &num);
+	}while(num<=0);
 
 	do{
-		if(r%c==7)	i++;
-		r/=c;
+		if(num%c==7)	i++;
+		num/=c;
 		
-	}while(r>=7);
+	}while(num>=7);
 
 	printf("\n Il numero 7 viene ritrovato: %d", i);
 
