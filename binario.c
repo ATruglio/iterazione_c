@@ -1,25 +1,26 @@
 #include <stdio.h>
-#include <math.h>
+
 
 int main()
 {
-	int numb,c,temp,numd=0,cont=0;
-	printf("Inserisci  un numero binario\n ");
-	scanf("%d", &numb);
-	temp=numb;
+	int numb,c,temp,numd=0,peso=1;
 	do{
+		printf("Inserisci  un numero binario\n ");
+		scanf("%d", &numb);	
+		temp=numb;
+		do{
 			c=temp%10;
 			temp/=10;
-			if(c>1) {
-				printf("Inserisci  un numero binario\n ");
-				scanf("%d", &numb);
-				temp=numb;
-				cont=0;
-			}
-			numd=numd+pow(2,cont);
-			cont++;
+		}while(c<1 || temp>0);
+	}while(c>1 );
+
+	temp=numb;
+	while(temp>0){
+			c=temp%10;
+			temp/=10;
+			numd=numd+c*peso;
+			peso*=2;
 	}
-	while(temp>0);
 
 	printf("%d(2) = %d(10)", numb, numd);
 

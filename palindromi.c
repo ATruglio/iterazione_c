@@ -4,17 +4,18 @@
 int main()
 {
 	int num,c5,c4,c2,c1;
-
+	/*la cifra intermedia non va considerata */
 	do{
 		printf("Inserire  un valore positivo compreso tra 10000 a  99999\n ");
 		scanf("%d", &num);
-	}while(num<10000 && num>99999);
+	}while(num<10000 || num>99999);
 
 	c5=num%10;
 	num/=10;
 	c4=num%10;
-	r/=100;
-	/*la cifra intermedia non va considerata non va considerata*/	
+	num/=10;
+	num/=10;
+	/*la cifra intermedia non va considerata */	
 	c2=num%10;
 	num/=10;
 	c1=num%10;

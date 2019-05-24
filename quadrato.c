@@ -8,16 +8,16 @@ int main() {
 		if(lun<1||lun>20)  printf("Valore fuori dai limiti!");			
 	}while(lun<1||lun>20);
 
-
-	do{
+	while(colonne<lun){
+			righe=0;
 			while(righe<lun){
 				righe++;
 				if(righe<lun) printf("*");
 			}
-			colonne++;
-			righe=0;
 			printf("*\n");
-	}while(colonne<lun);
+
+			colonne++;
+	}
 
 	return 0;
 }

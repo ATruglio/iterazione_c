@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main(){
-	int riga=1,colonna=1;
+	int riga=1,colonna;
 	printf("\n");
 	while(riga<=10){
-		while(a<=10){
-			printf("%d\t",a*riga);
+		colonna=1;
+		while(colonna<=10){
+			printf("%d\t",colonna*riga);
 			colonna++;
 			
 	         }
-		riga++;
-		colonna=1;
 		printf("\n");
+	riga++;
 	}
 	return 0;
 }

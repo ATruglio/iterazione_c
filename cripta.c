@@ -7,23 +7,15 @@ int main()
 	do{
 		printf("Inserire  un numero a quattro cifre\n ");
 		scanf("%d", &num);
-	}while(num<1000 && num>9999);
+	}while(num<1000 || num>9999);
 	temp=num;
-	c1=temp%10;
-	if(c1>3)	{ c1-=3;}
-	else  		{ c1+=7;}
+	c1=(temp%10+7)%10;
 	temp/=10;
-	c2=temp%10;
-	if(c2>3)	{ c2-=3;}
-	else  		{ c2+=7;}
+	c2=(temp%10+7)%10;
 	temp/=10;
-	c3=temp%10;
-	if(c3>3)	{ c3-=3;}
-	else  		{ c3+=7;}
+	c3=(temp%10+7)%10;
 	temp/=10;
-	c4=temp%10;
-	if(c4>3)	{ c4-=3;}
-	else  		{ c4+=7;}
+	c4=(temp%10+7)%10;
 	crip=c2*1000+c1*100+c4*10+c3;
 
 	printf("Numero da crittografare: %d \n Numero crittografato: %d", num,  crip);
