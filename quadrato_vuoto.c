@@ -7,19 +7,18 @@ int main() {
 		scanf("%d", &lun);	
 		if(lun<1||lun>20)  printf("Valore fuori dai limiti!");			
 	}while(lun<1||lun>20);
-
-	while(colonne<lun){
-			righe=0;
-			while(righe<lun-1){
-				righe++;
-				if(righe==1||colonne==0||colonne==lun-1) printf("*");
+	while(righe<lun){
+			colonne=0;
+			while(colonne<lun-1){
+				colonne++;
+				if(colonne==1||righe==0||righe==lun-1) printf("*");
 				else putchar(' ');
-				if(righe==lun) printf("*");
+				if(colonne==lun) printf("*");
 			}
-	
 		printf("*\n");
-		colonne++;
+		righe++;
 	}
-
+	
+	putchar('\n');
 	return 0;
 }
